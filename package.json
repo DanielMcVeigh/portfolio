@@ -4,5 +4,8 @@
   "main": "index.js",
   "author": "Daniel McVeigh",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
 }
