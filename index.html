@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <title>Daniel McVeigh</title>
   <style>
     @font-face {
@@ -51,29 +53,69 @@
       text-align: center;
       height: 2em;
     }
+
+    .pagedown {
+      position: absolute;
+      text-align: center;
+      font-size: 3em;
+      width: 100%;
+      padding-top: 1.2em;
+    }
+
+    .infopage {
+      width: 100%;
+      height: 0;
+      background-color: white;
+      color: #23252b;
+      position: absolute;
+      bottom: 50%;
+      top: 5em;
+      display: flex;
+      align-items: flex-start;
+     
+    }
   </style>
 </head>
 
 <body>
 
 
-  <div class="tophalf">
+  <div class="tophalf" id="tophalf">
 
     <div class="name">
       <span>daniel mcveigh</span>
     </div>
 
   </div>
+  <div class="infopage" id="infopage">
+    This is a lot of text
 
-  <div class="bottomhalf">
+
+  </div>
+  <div class="bottomhalf" id="bottomhalf">
     <div class="title">
       <span>
         softwaRe developEr
       </span>
     </div>
+    <div class="pagedown">
+      <i class="fas fa-angle-double-down" onclick="ExpandPage()" ></i>
+    </div>
   </div>
 
+  <script>
+    function ExpandPage() {
+      console.log("Alert hit");
+      var toppage = document.getElementById("tophalf");
+      var bottompage = document.getElementById("bottomhalf");
+      var infopage = document.getElementById("infopage");
 
+      toppage.style.height = "5em";
+      bottompage.style.height = "8em";
+      infopage.style.height = "45em";
+
+    }
+  </script>
 
 </body>
 
